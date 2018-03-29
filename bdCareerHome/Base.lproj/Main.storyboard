@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="bdCareerHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbO-lU-bcb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.73333333329999995" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="i78-2c-W34">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vbO-lU-bcb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BRI-YG-n2e"/>
+                            <constraint firstItem="vbO-lU-bcb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CX0-xf-Oh9"/>
+                            <constraint firstItem="i78-2c-W34" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a3i-En-0A9"/>
+                            <constraint firstItem="i78-2c-W34" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fCw-jm-MmM"/>
+                            <constraint firstItem="vbO-lU-bcb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gKn-lx-yx5"/>
+                            <constraint firstItem="vbO-lU-bcb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kfy-gP-zrC"/>
+                            <constraint firstItem="vbO-lU-bcb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lfe-NH-2WF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="spinner" destination="i78-2c-W34" id="FAF-sx-Jbs"/>
+                        <outlet property="webView" destination="vbO-lU-bcb" id="78a-K5-RIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="-150"/>
+        </scene>
+    </scenes>
+</document>
